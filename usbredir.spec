@@ -14,6 +14,7 @@ Version:	0.4.3
 Release:	%mkrel 1
 License:	GPL-2.0+ ; LGPL-2.1+
 Summary:	A protocol for redirection USB traffic
+URL:		http://spice-space.org/page/UsbRedir
 Group:		System/Libraries
 Source0:	http://spice-space.org/download/%{name}/%{name}-%{version}.tar.bz2
 BuildRequires:	pkgconfig(libusb-1.0) => 1.0.9
