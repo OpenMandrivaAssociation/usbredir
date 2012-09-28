@@ -1,7 +1,7 @@
 
 %define oname		usbredir
 
-%define major_parser		0
+%define major_parser		1
 %define libname_parser		%mklibname usbredirparser %{major_parser}
 %define develname_parser	%mklibname usbredirparser -d
 
@@ -10,8 +10,8 @@
 %define develname_host		%mklibname usbredirhost -d
 
 Name:		usbredir
-Version:	0.4.3
-Release:	2
+Version:	0.5.1
+Release:	1
 License:	GPL-2.0+ ; LGPL-2.1+
 Summary:	A protocol for redirection USB traffic
 URL:		http://spice-space.org/page/UsbRedir
