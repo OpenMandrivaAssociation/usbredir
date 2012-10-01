@@ -10,7 +10,7 @@
 %define develname_host		%mklibname usbredirhost -d
 
 Name:		usbredir
-Version:	0.5.1
+Version:	0.5.2
 Release:	1
 License:	GPL-2.0+ ; LGPL-2.1+
 Summary:	A protocol for redirection USB traffic
@@ -115,7 +115,7 @@ find %{buildroot} -type f -name "*.la" -delete -print
 %files -n %{develname_parser}
 %{_includedir}/usbredirparser.h
 %{_libdir}/libusbredirparser.so
-%{_libdir}/pkgconfig/libusbredirparser.pc
+%{_libdir}/pkgconfig/libusbredirparser-0.5.pc
 
 %files devel
 %{_includedir}/usbredirproto.h
