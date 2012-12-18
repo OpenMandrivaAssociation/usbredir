@@ -10,7 +10,7 @@
 %define develname_host		%mklibname usbredirhost -d
 
 Name:		usbredir
-Version:	0.5.2
+Version:	0.6
 Release:	1
 License:	GPL-2.0+ ; LGPL-2.1+
 Summary:	A protocol for redirection USB traffic
