@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   usbredir-0.6.tar.bz2: 5f931b9c05fc7cefa68bd05f59d28b201661777e
+sources:
+  usbredir-0.7.tar.bz2: 75adb8888efccd23d7e9a95a5e7b89a7fd1ecd07
