@@ -11,7 +11,7 @@
 
 Name:		usbredir
 Version:	0.8.0
-Release:	1
+Release:	2
 License:	GPL-2.0+ ; LGPL-2.1+
 Summary:	A protocol for redirection USB traffic
 URL:		http://spice-space.org/download/usbredir/
