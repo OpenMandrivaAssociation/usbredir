@@ -1,22 +1,21 @@
+%define oname usbredir
 
-%define oname		usbredir
+%define major_parser 1
+%define libname_parser %mklibname usbredirparser %{major_parser}
+%define develname_parser %mklibname usbredirparser -d
 
-%define major_parser		1
-%define libname_parser		%mklibname usbredirparser %{major_parser}
-%define develname_parser	%mklibname usbredirparser -d
-
-%define major_host		1
-%define libname_host		%mklibname usbredirhost %{major_host}
-%define develname_host		%mklibname usbredirhost -d
+%define major_host 1
+%define libname_host %mklibname usbredirhost %{major_host}
+%define develname_host %mklibname usbredirhost -d
 
 Name:		usbredir
-Version:	0.8.0
-Release:	3
+Version:	0.10.0
+Release:	1
 License:	GPL-2.0+ ; LGPL-2.1+
 Summary:	A protocol for redirection USB traffic
 URL:		http://spice-space.org/download/usbredir/
 Group:		System/Libraries
-Source0:	http://spice-space.org/download/usbredir/%{name}-%{version}.tar.bz2
+Source0:	http://spice-space.org/download/usbredir/%{name}-%{version}.tar.xz
 BuildRequires:	pkgconfig(libusb-1.0) => 1.0.9
 
 %description
@@ -84,16 +83,14 @@ attached. See usb-redirection-protocol.txt for the description / definition
 of this protocol.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
-#export CPPFLAGS="$(pkg-config --cflags libusb-1.0) %{optflags}"
-#export LDFLAGS=$(pkg-config --libs libusb-1.0)
-%configure2_5x --disable-static
-%make
+%configure --disable-static
+%make_build
 
 %install
-%makeinstall_std LIBDIR=%{_libdir} PREFIX=%{_prefix}
+%make_install LIBDIR=%{_libdir} PREFIX=%{_prefix}
 find %{buildroot} -type f -name "*.la" -delete -print
 
 %files
