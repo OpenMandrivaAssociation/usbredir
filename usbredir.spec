@@ -96,7 +96,7 @@ of this protocol.
 find %{buildroot} -type f -name "*.la" -delete -print
 
 %files
-%doc ChangeLog README COPYING
+%doc ChangeLog.md README.md COPYING
 %{_sbindir}/usbredirserver
 %{_mandir}/man1/usbredirserver.1.*
 
