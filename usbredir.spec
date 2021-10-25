@@ -17,6 +17,7 @@ URL:		http://spice-space.org/download/usbredir/
 Group:		System/Libraries
 Source0:	http://spice-space.org/download/usbredir/%{name}-%{version}.tar.xz
 BuildRequires:	pkgconfig(libusb-1.0) => 1.0.9
+BuildRequires:  pkgconfig(gio-unix-2.0)
 BuildRequires:  meson
 
 %description
