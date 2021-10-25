@@ -100,6 +100,7 @@ find %{buildroot} -type f -name "*.la" -delete -print
 %{_sbindir}/usbredirserver
 %{_bindir}/usbredirect
 %{_mandir}/man1/usbredirserver.1.*
+%{_mandir}/man1/usbredirect.1.*
 
 %files -n %{libname_host}
 %{_libdir}/libusbredirhost.so.%{major_host}*
