@@ -9,7 +9,7 @@
 %define develname_host %mklibname usbredirhost -d
 
 Name:		usbredir
-Version:	0.10.0
+Version:	0.11.0
 Release:	1
 License:	GPL-2.0+ ; LGPL-2.1+
 Summary:	A protocol for redirection USB traffic
@@ -17,6 +17,7 @@ URL:		http://spice-space.org/download/usbredir/
 Group:		System/Libraries
 Source0:	http://spice-space.org/download/usbredir/%{name}-%{version}.tar.xz
 BuildRequires:	pkgconfig(libusb-1.0) => 1.0.9
+BuildRequires:  meson
 
 %description
 usbredir is a protocol for redirection USB traffic from a single USB device,
@@ -86,11 +87,11 @@ of this protocol.
 %autosetup -p1
 
 %build
-%configure --disable-static
-%make_build
+%meson
+%meson_build
 
 %install
-%make_install LIBDIR=%{_libdir} PREFIX=%{_prefix}
+%meson_install
 find %{buildroot} -type f -name "*.la" -delete -print
 
 %files
