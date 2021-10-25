@@ -98,6 +98,7 @@ find %{buildroot} -type f -name "*.la" -delete -print
 %files
 %doc ChangeLog.md README.md COPYING
 %{_sbindir}/usbredirserver
+%{_bindir}/usbredirect
 %{_mandir}/man1/usbredirserver.1.*
 
 %files -n %{libname_host}
