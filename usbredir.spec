@@ -13,7 +13,7 @@ Version:	0.12.0
 Release:	2
 License:	GPL-2.0+ ; LGPL-2.1+
 Summary:	A protocol for redirection USB traffic
-URL:		http://spice-space.org/download/usbredir/
+URL:		https://spice-space.org/download/usbredir/
 Group:		System/Libraries
 Source0:	http://spice-space.org/download/usbredir/%{name}-%{version}.tar.xz
 BuildRequires:	pkgconfig(libusb-1.0) => 1.0.9
